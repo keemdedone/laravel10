@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Framework;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,6 @@ Route::get('/', function () {
 
 Route::get('/homepage', function () {
     return view('homepage');
-});
+})->name('homepage');
 
-Route::get('/framework', function () {
-    return view('pages.framework');
-});
+Route::get('/framework', [Framework::class, 'getFrameworks'])->name('framework');

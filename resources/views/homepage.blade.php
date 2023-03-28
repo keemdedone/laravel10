@@ -15,16 +15,20 @@
         @endcomponent
     </div>
 
-    <div class="content">
+    <div class="content min-h-screen relative" style="background: #171923f2">
         @component('main-component.app-side')
         @endcomponent
-        @yield('route-content')
+        <div class="px-5 py-5 sm:px-8 lg:px-10">
+            @yield('route-content')
+        </div>
     </div>
 
     <div class="footer">
         @component('main-component.app-footer')
         @endcomponent
     </div>
+
+    <script src={{ asset('js/app.js') }}></script>
 </body>
 
 </html>

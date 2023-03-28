@@ -8,9 +8,9 @@ use App\Models\Framework as Frameworks;
 
 class Framework extends Controller
 {
-    public function FunctionName(Frameworks $frameworks)
+    public function getFrameworks(Frameworks $frameworks)
     {
         $frameworks = Frameworks::select('name', 'owner', 'language')->get()->toArray();
-        return $frameworks;
+        return view('pages.framework', ['data' => $frameworks]);
     }
 }
