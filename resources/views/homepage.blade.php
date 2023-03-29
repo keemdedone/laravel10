@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Hompage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     @vite('resources/css/app.css')
 </head>
 
@@ -15,7 +16,7 @@
         @endcomponent
     </div>
 
-    <div class="content min-h-screen relative" style="background: #171923f2">
+    <div class="content relative min-h-screen" style="background: #171923f2">
         @component('main-component.app-side')
         @endcomponent
         <div class="px-5 py-5 sm:px-8 lg:px-10">
