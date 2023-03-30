@@ -1,6 +1,16 @@
 @extends('homepage')
 @section('route-content')
-    <div class="py-24 px-6 sm:py-32 lg:px-8">
+    <div class="w-20">
+        <a class="laravel-bg flex gap-1 rounded px-3 py-1 text-white transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+            href={{ route('framework.index') }} type="button">
+            <svg class="h-6 w-6" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Back</span>
+        </a>
+    </div>
+    <div class="py-10 px-6 sm:py-14 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
             <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Edit {{ $framework->name }}</h2>
             <p class="mt-2 text-lg leading-8 text-gray-600">
@@ -52,8 +62,12 @@
             </div>
             <div class="mt-12">
                 <button
-                    class="laravel-bg block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    class="laravel-bg mx-auto flex items-center justify-center gap-1 rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                     type="submit">
+                    <svg class="h-6 w-6" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
                     Update
                 </button>
             </div>

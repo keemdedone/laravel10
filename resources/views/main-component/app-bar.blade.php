@@ -25,8 +25,10 @@
 
             <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex flex-shrink-0 items-center">
-                    <img alt="Laravel" class="h-8 w-8 shrink-0 transition-all duration-300" height="42"
-                        src="https://laravel.com/img/logomark.min.svg" width="40">
+                    <a href={{ route('homepage') }}>
+                        <img alt="Laravel" class="h-8 w-8 shrink-0 transition-all duration-300" height="42"
+                            src="https://laravel.com/img/logomark.min.svg" width="40">
+                    </a>
                 </div>
             </div>
 

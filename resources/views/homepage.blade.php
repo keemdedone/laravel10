@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>Hompage</title>
+    <title>Laravel No.1</title>
+    <link href="https://laravel.com/img/logomark.min.svg" rel="icon">
     <script src="https://cdn.tailwindcss.com"></script>
     @vite('resources/css/app.css')
 </head>

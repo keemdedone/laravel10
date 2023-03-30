@@ -12,7 +12,7 @@
                 <th class="border border-slate-600 px-5 py-2">
                     <div class="flex items-center justify-center gap-4">
                         Action
-                        <a class="flex gap-1 rounded bg-green-500 px-3 py-1 text-white transition duration-150 ease-in-out hover:bg-green-600 hover:shadow-lg focus:bg-green-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
+                        <a class="flex gap-1 rounded bg-green-500 px-3 py-1 text-white transition duration-150 ease-in-out hover:bg-green-400 hover:shadow-lg focus:bg-green-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg"
                             href={{ route('framework.create') }} type="button">
                             <svg class="h-6 w-6" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@
                     </td>
                     <td class="border border-slate-700 px-5 py-2">
                         <div class="flex gap-4">
-                            <a class="flex gap-1 rounded bg-sky-500 px-4 py-1 text-white transition duration-150 ease-in-out hover:bg-sky-600 hover:shadow-lg focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-800 active:shadow-lg"
+                            <a class="flex gap-1 rounded bg-sky-500 px-4 py-1 text-white transition duration-150 ease-in-out hover:bg-sky-400 hover:shadow-lg focus:bg-sky-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-800 active:shadow-lg"
                                 href={{ route('framework.edit', $framework['id']) }} type="button">
                                 <svg class="h-6 w-6" fill="none" stroke-width="1.5" stroke="currentColor"
                                     viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button
-                                    class="flex gap-1 rounded bg-red-500 px-4 py-1 text-white transition duration-150 ease-in-out hover:bg-red-600 hover:shadow-lg focus:bg-red-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+                                    class="flex gap-1 rounded bg-red-500 px-4 py-1 text-white transition duration-150 ease-in-out hover:bg-red-400 hover:shadow-lg focus:bg-red-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
                                     type="submit">
                                     <svg class="h-6 w-6" fill="none" stroke-width="1.5" stroke="currentColor"
                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
