@@ -14,7 +14,7 @@
                 <div class="sm:col-span-2">
                     <label class="block text-sm font-semibold leading-6 text-white" for="first-name">Framework name</label>
                     <div class="mt-2.5">
-                        <input autocomplete="given-name"
+                        <input autocomplete="off"
                             class="block w-full rounded-md border-0 py-2 px-3.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             id="first-name" name="name" type="text">
                         @error('name')
@@ -27,7 +27,7 @@
                         Owner name
                     </label>
                     <div class="mt-2.5">
-                        <input autocomplete="family-name"
+                        <input autocomplete="off"
                             class="block w-full rounded-md border-0 py-2 px-3.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             id="last-name" name="owner" type="text">
                         @error('owner')
@@ -40,7 +40,7 @@
                         Language name
                     </label>
                     <div class="mt-2.5">
-                        <input autocomplete="organization"
+                        <input autocomplete="off"
                             class="block w-full rounded-md border-0 py-2 px-3.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             id="company" name="language" type="text">
                         @error('language')

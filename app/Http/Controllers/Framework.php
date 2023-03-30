@@ -19,6 +19,11 @@ class Framework extends Controller
         return view('pages.framework.create');
     }
 
+    public function edit(FrameworkModel $framework)
+    {
+        return view('pages.framework.edit', compact('framework'));
+    }
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -34,8 +39,24 @@ class Framework extends Controller
         return redirect()->route('framework.index');
     }
 
-    public function edit($id)
+    public function update(Request $request, $id)
     {
-        return view('pages.framework.edit', ['id' => $id]);
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'owner' => 'required',
+            'language' => 'required',
+        ]);
+        $store = FrameworkModel::find($id);
+        $store->name = $validatedData['name'];
+        $store->owner = $validatedData['owner'];
+        $store->language = $validatedData['language'];
+        $store->save();
+        return redirect()->route('framework.index');
+    }
+
+    public function destroy(FrameworkModel $framework)
+    {
+        $framework->delete();
+        return redirect()->route('framework.index');
     }
 }
