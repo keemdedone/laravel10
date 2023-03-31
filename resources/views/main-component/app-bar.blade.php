@@ -32,7 +32,8 @@
                 </div>
             </div>
 
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+            <div
+                class="absolute inset-y-0 right-0 flex items-center gap-3 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                     class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     type="button">
@@ -44,6 +45,14 @@
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
+                <form action={{ route('user.logout') }} method="post">
+                    @csrf
+                    <button
+                        class="rounded bg-gray-800 px-2 py-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        type="submit">
+                        Logout
+                    </button>
+                </form>
             </div>
         </div>
     </div>

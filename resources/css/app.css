@@ -4,10 +4,23 @@
 
 :root {
     --primary-color: #eb4432;
+    --primary-dark:#171923f2;
+}
+
+.laravel-color {
+    color: var(--primary-color) !important;
 }
 
 .laravel-bg {
     background-color: var(--primary-color) !important;
+}
+
+.dark-color {
+    color: var(--primary-dark) !important;
+}
+
+.dark-bg {
+    background-color: var(--primary-dark) !important;
 }
 
 .content {

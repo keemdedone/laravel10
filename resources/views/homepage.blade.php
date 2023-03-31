@@ -12,23 +12,31 @@
 </head>
 
 <body>
-    <div class="top">
-        @component('main-component.app-bar')
-        @endcomponent
-    </div>
+    @if (Route::has('login'))
+        @auth
+            <div class="top">
+                @component('main-component.app-bar')
+                @endcomponent
+            </div>
 
-    <div class="content relative min-h-screen" style="background: #171923f2">
-        @component('main-component.app-side')
-        @endcomponent
-        <div class="px-5 py-5 sm:px-8 lg:px-10">
-            @yield('route-content')
-        </div>
-    </div>
+            <div class="dark-bg content relative min-h-screen">
+                @component('main-component.app-side')
+                @endcomponent
+                <div class="px-5 py-5 sm:px-8 lg:px-10">
+                    @yield('route-content')
+                </div>
+            </div>
 
-    <div class="footer">
-        @component('main-component.app-footer')
-        @endcomponent
-    </div>
+            <div class="footer">
+                @component('main-component.app-footer')
+                @endcomponent
+            </div>
+        @else
+            <div class="dark-bg">
+                @yield('route-auth', view('main-component.auth-login'))
+            </div>
+        @endauth
+    @endif
 
     <script src={{ asset('js/app.js') }}></script>
 </body>

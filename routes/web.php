@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Framework;
+use App\Http\Controllers\User;
 
 Route::resource('framework', Framework::class);
+Route::resource('user', User::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -24,8 +26,13 @@ Route::get('/homepage', function () {
     return view('homepage');
 })->name('homepage');
 
-// Route::get('/framework', [Framework::class, 'index'])->name('framework');
+Route::get('/login', function () {
+    return view('main-component.auth-login');
+})->name('login');
 
-// Route::get('/framework/create', [Framework::class, 'create'])->name('framework.create');
+Route::get('/register', function () {
+    return view('main-component.auth-register');
+})->name('register');
 
-// Route::get('/framework/edit/{id}', [Framework::class, 'edit'])->name('framework.edit');
+Route::post('/users/login', [User::class, 'login'])->name('user.login');
+Route::post('/users/logout', [User::class, 'logout'])->name('user.logout');
