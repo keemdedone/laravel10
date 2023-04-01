@@ -3,9 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Framework;
 use App\Http\Controllers\User;
+use App\Http\Controllers\Mail;
 
 Route::resource('framework', Framework::class);
 Route::resource('user', User::class);
+Route::resource('mail', Mail::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +38,5 @@ Route::get('/register', function () {
 
 Route::post('/users/login', [User::class, 'login'])->name('user.login');
 Route::post('/users/logout', [User::class, 'logout'])->name('user.logout');
+
+Route::post('/mail/send', [Mail::class, 'sendEmail'])->name('mail.send');
