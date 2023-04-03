@@ -6,7 +6,7 @@
             <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 href={{ route('framework.index') }}>Framework</a>
             <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                href="#">Calendar</a>
+                href={{ route('calendar.index') }}>Calendar</a>
             <a class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 href={{ route('mail.index') }}>Mail</a>
         </div>

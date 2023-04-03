@@ -4,7 +4,7 @@
     <div class="flex items-center justify-center px-2 py-6 sm:px-3 lg:px-4">
         <div class="py-10 px-6 sm:py-14 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Send email system</h2>
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Email Sending System</h2>
                 <p class="mt-2 text-lg leading-8 text-gray-600">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, exercitationem.
                 </p>
@@ -13,7 +13,7 @@
                 method="POST">
                 @csrf
                 <div class="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
-                    <div class="sm:col-span-2">
+                    <div class="sm:col-span-1">
                         <label class="block text-sm font-semibold leading-6 text-white" for="sender-name">
                             Sender email address
                         </label>
@@ -26,7 +26,7 @@
                             @enderror
                         </div>
                     </div>
-                    <div class="sm:col-span-2">
+                    <div class="sm:col-span-1">
                         <label class="block text-sm font-semibold leading-6 text-white" for="receive-name">
                             Receive email address
                         </label>
@@ -40,12 +40,25 @@
                         </div>
                     </div>
                     <div class="sm:col-span-2">
+                        <label class="block text-sm font-semibold leading-6 text-white" for="subject">
+                            Subject
+                        </label>
+                        <div class="mt-2.5">
+                            <input autocomplete="off"
+                                class="block w-full rounded-md border-0 py-2 px-3.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                id="subject" name="subject" type="text">
+                            @error('subject')
+                                <p class="mt-1 text-red-500">required</p>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2">
                         <label class="block text-sm font-semibold leading-6 text-white" for="massage">
                             Massage
                         </label>
                         <div class="mt-2.5">
                             <textarea
-                                class="block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6"
+                                class="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:py-1.5 sm:text-sm sm:leading-6"
                                 id="massage" name="massage" rows="5"></textarea>
                             @error('massage')
                                 <p class="mt-1 text-red-500">required</p>

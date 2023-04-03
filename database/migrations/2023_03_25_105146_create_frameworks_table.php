@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('owner');
             $table->string('language');
+            $table->string('picturePath');
             $table->timestamps();
         });
     }

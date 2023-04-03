@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
@@ -29,7 +28,7 @@ class MailSend extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Mail Send From Laravel 10',
+            subject: $this->details['subject'],
         );
     }
 
@@ -55,8 +54,6 @@ class MailSend extends Mailable
 
     public function build()
     {
-        return $this->subject('Email testing')
-            ->view('pages.mail.content')
-            ->with('details', $this->details);
+        return view('pages.mail.content')->with('details', $this->details);
     }
 }

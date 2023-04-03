@@ -38,6 +38,7 @@
         @endauth
     @endif
 
+    @stack('content-script')
     <script src={{ asset('js/app.js') }}></script>
 </body>
 

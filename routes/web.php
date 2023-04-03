@@ -4,10 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Framework;
 use App\Http\Controllers\User;
 use App\Http\Controllers\Mail;
+use App\Http\Controllers\Calendar;
 
 Route::resource('framework', Framework::class);
 Route::resource('user', User::class);
 Route::resource('mail', Mail::class);
+Route::resource('calendar', Calendar::class);
 
 /*
 |--------------------------------------------------------------------------
