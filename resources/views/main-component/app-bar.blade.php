@@ -45,7 +45,7 @@
                             stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <form action={{ route('user.logout') }} method="post">
+                <form action={{ route('user.logout') }} class="m-0" method="post">
                     @csrf
                     <button
                         class="rounded bg-gray-800 px-2 py-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"

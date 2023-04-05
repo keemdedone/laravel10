@@ -6,6 +6,7 @@
     <table class="mx-auto border-collapse select-none border border-slate-500 text-white">
         <thead>
             <tr>
+                <th class="border border-slate-600 px-5 py-2">Logo</th>
                 <th class="border border-slate-600 px-5 py-2">Name</th>
                 <th class="border border-slate-600 px-5 py-2">Owner</th>
                 <th class="border border-slate-600 px-5 py-2">Language</th>
@@ -28,6 +29,10 @@
         <tbody>
             @foreach ($data as $framework)
                 <tr>
+                    <td class="border border-slate-700 px-5 py-2">
+                        <img alt={{ $framework['name'] }} class="max-w-14 h-full max-h-14 w-full object-cover"
+                            src={{ asset('storage/files/' . $framework['picturePath']) }} />
+                    </td>
                     <td class="border border-slate-700 px-5 py-2">
                         {{ $framework['name'] }}
                     </td>

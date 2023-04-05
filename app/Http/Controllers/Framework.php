@@ -11,7 +11,7 @@ class Framework extends Controller
 {
     public function index()
     {
-        $frameworks = FrameworkModel::select('id', 'name', 'owner', 'language')->get()->toArray();
+        $frameworks = FrameworkModel::select('id', 'name', 'owner', 'language', 'picturePath')->get()->toArray();
         return view('pages.framework.main', ['data' => $frameworks]);
     }
 
